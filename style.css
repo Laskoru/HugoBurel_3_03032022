@@ -5,6 +5,11 @@
     font-family: "roboto", "sans-serif";
     src: url(./police/roboto.eot) format("eot");
 }
+img
+{
+    width: 95%;
+    margin-top: 20px;
+}
 header
 {
     max-width: 95%;
@@ -83,15 +88,32 @@ header
 .img-restaurant
 {
     max-width: 100%;
+    border-radius: 15px 15px 0px 0px;
 }
 .fa-heart
 {
     float: right;
     margin-right: 15px;
+    font-size: 2rem;
 }
-.fa-heart:hover
+.fa-heart:active, :visited
 {
-    color: #9356DC;
+    background-color: #9356DC;
+}
+.footer-logo
+{
+    width: 50%;
+    margin-left: 15px;
+}
+.footer-menu
+{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.footer
+{
+
+    background-color: gray;
 }
 }
 /*# sourceMappingURL=style.css.map */
