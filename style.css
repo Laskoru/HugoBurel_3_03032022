@@ -128,17 +128,19 @@ input
 {
     width: 50%;
     margin-left: 15px;
+    filter: invert(100%);
 }
 .footer-menu
 {
     margin-top: 15px;
     margin-left: 20px;
+    color: white;
     
 }
 .footer
 {
 
-    background-color: #F2F2F2;
+    background-color: #4B4B4B;
 }
 .footer-icon
 {
