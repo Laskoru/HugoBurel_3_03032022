@@ -4,46 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/eea8d295f1.js" crossorigin="anonymous"></script>
     <title>ohmyfood</title>
 </head>
 <header>
     <div>
-        <img src="./images/logo/ohmyfood.png"/>
+        <img class="logo-header" src="./images/logo/ohmyfood.png"/>
     </div>
     <div class="map">
         <i class="fa-solid fa-location-dot"></i>
-        <div class="localisation">Paris, Belleville</div>
+        <a class="localisation">Paris, Belleville</a>
     </div>
-    <div class="intro">
+    <div class="intro background-light">
         <div>
             <h1>Réservez le menu qui vous convient</h1>
         </div>
         <div>
             Découvrez des restaurant d'exception, sélectionné par nos soins.
         </div>
-        <button class="btn duration" type="button">Explorer nos restaurant</button>
+        <button class="btn-intro btn-radius" type="button">Explorer nos restaurant</button>
     </div>
 
 </header>
-<nav class="fonctionnement">
-    <span><h1>Fonctionnement</h1></span>
-        <div class="btn-menu">
+<nav>
+    <a><h1>Fonctionnement</h1></a>
+        <div class="btn background-light btn-radius">
         <span class="btn-number">1</span>
         <i class="fa-solid fa-mobile-screen-button btn-color"></i>
         <span>choisissez un restaurant</span>
         </div>
         
        
-        <div class="btn-menu">
+        <div class="btn background-light btn-radius">
             <span class="btn-number">2</span>
         <i class="fa-solid fa-bars btn-color"></i>
         <span>Composez votre menu</span>
         </div>
         
     
-        <div class="btn-menu">
+        <div class="btn background-light btn-radius">
             <span class="btn-number">3</span>
         <i class="fa-solid fa-store btn-color"></i>
         <span>Dégustez au restaurant</span>
@@ -52,9 +53,10 @@
    
 </nav>
 <body>
-    <div class="list-restaurants">
+    <div class="list-restaurants background-light">
         <span><h1>Restaurant</h1></span>
         <div class="restaurant">
+            <a href="./la_palette_du_gout.html">
             <img class="img-restaurant" src="./images/restaurants/lapalettedugout.jpg"/>
                 <div class="description-restaurant">
                     <label class="like">
@@ -65,6 +67,7 @@
             <span><h2>La Palette du goût</h2></span>
             
             <span>Ménilmontant</span>
+                </a>
             </div>
         </div>
         <div class="restaurant">
@@ -107,7 +110,7 @@
         </div>
         </div>
         <footer>
-            <div class="footer">
+            <div class="footer fond-gris-fonce">
                 <img class="footer-logo" src="./images/logo/ohmyfood.png">
                 <div class="footer-menu">
                     <i class="fa-solid fa-utensils footer-icon"></i>
