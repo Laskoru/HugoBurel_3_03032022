@@ -1,9 +1,57 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
 {
-@font-face 
+body
 {
-    font-family: "roboto", "sans-serif";
-    src: url(./police/roboto.eot) format("eot");
+    font-family: "roboto",Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+.uppercase
+{
+    text-transform: uppercase;
+}
+.italique
+{
+    font-style: italic;
+}
+.fond-gris-clair
+{
+    background-color: #E5E5E5;
+}
+.fond-gris-fonce
+{
+    background-color: #4B4B4B;
+}
+.shrikhand
+{
+    font-family: "shrikhand";
+}
+h1
+{
+    font-size: 1.9rem;
+    margin-left: 20px;
+}
+h2
+{
+    font-size: 1.4rem;
+}
+h4
+{
+    border-bottom: 2px solid #99e2d0 ;
+    width: 30px;
+
+}
+h5
+{
+    font-size: 1.3em;
+}
+.btn-radius
+{
+    border-radius: 25px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+a:link 
+{ 
+ text-decoration:none; 
 }
 img
 {
@@ -31,7 +79,6 @@ header
 }
 .intro
 {
-    background-color: #E5E5E5;
     padding: 15px;
     text-align: center;
     justify-content: center;
@@ -41,7 +88,6 @@ header
     margin-top: 20px;
     background:linear-gradient(#FF79DA, #9356DC );
     padding: 15px 15px 15px 15px;
-    border-radius: 25px;
     color: white;
     border: none;
 }
@@ -52,12 +98,11 @@ header
 }
 .btn-menu
 {
-    background: #F2F2F2;
-    border-radius: 25px;
+    
     padding: 15px;
     margin: 30px;
     padding-left: 0px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    
 }
 .btn-number
 {
@@ -75,7 +120,6 @@ header
 }
 .list-restaurants
 {
-    background-color: #E5E5E5;
     padding: 5px;
 }
 input
@@ -137,14 +181,68 @@ input
     color: white;
     
 }
-.footer
-{
-
-    background-color: #4B4B4B;
-}
 .footer-icon
 {
     margin-right: 5px;
 }
+.logo-menu
+{
+    width: 50%;
+    margin: auto;
+    display: flex;
+}
+.header-menu
+{
+    display: flex;
+    align-items: center;
+}
+.img-menu
+{
+    width: 100%;
+    height: auto;
+}
+.menu-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-list
+{
+    border-radius: 15px 0px 15px 0px;
+}
+.menu
+{
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 0px 10px 15px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.menu-prix
+{
+
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+}
+.menu-plat
+{
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+}
+.menu-check
+{
+    display: flex;
+    justify-content: flex-end;
+}
+.menu-check input[type="checkbox"]:checked~.checked {
+	display: inline-block;
+}
+
+.menu-check input[type="checkbox"]:checked~.unchecked {
+	display: none;
 }
 /*# sourceMappingURL=style.css.map */

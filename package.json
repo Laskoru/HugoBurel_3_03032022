@@ -1,0 +1,19 @@
+{
+  "name": "hugoburel_3_03032022",
+  "version": "1.0.0",
+  "description": "Projet P3 openclassroom",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laskoru/HugoBurel_3_03032022.git"
+  },
+  "author": "Hugo Burel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Laskoru/HugoBurel_3_03032022/issues"
+  },
+  "homepage": "https://github.com/Laskoru/HugoBurel_3_03032022#readme"
+}
