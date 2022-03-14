@@ -5,7 +5,8 @@ $color-light: #E5E5E5;
 $color-dark: #4B4B4B;
 $breakpoints:(mobile: 599px, desktop: 600px);
 $shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
-$gradient:  linear-gradient(62deg, #9356dc 0%, #ff79da 100%);
+$hover: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;;
+$gradient:  linear-gradient(80deg, #9356dc 0%, #ff79da 100%);
 
 @mixin mobile-only {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
@@ -78,10 +79,10 @@ h3
     background:$color-light;
     display: flex;
     align-items: center;
-}
-.btn:hover
-{
-    background: $color-tertiary;
+    transition: all 200ms;
+    &:hover{
+        background-color: $color-tertiary;
+    }
 }
 .btn:active
 {
@@ -165,6 +166,12 @@ input
     margin-bottom: 20px;
     padding-bottom: 10px;
     box-shadow: $shadow;
+    transition: 200ms;
+    cursor: pointer;
+    &:hover
+    {
+        box-shadow: $hover;
+    }
 }
 .img-restaurant
 {
@@ -232,11 +239,7 @@ input
     border-radius: 15px 15px 0px 0px;
     padding: 15px;
 }
-.menu
-{
-    
- 
-}
+
 .menu-prix
 {
     font-size: 1.5rem;
