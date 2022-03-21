@@ -1,3 +1,21 @@
+@-webkit-keyframes check {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes check {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 html {
   font-family: "roboto",Arial, Helvetica, sans-serif;
 }
@@ -21,6 +39,24 @@ h3 {
   color: white;
 }
 
+h4 {
+  border-bottom: 4px solid #99E2D0;
+  width: 30px;
+  margin-left: 10px;
+}
+
+h5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.1rem;
+  margin: 3px;
+}
+
+h6 {
+  font-size: 1.6rem;
+  margin: 3px;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -32,6 +68,11 @@ h3 {
   width: 40%;
   margin: auto;
   text-align: center;
+}
+
+.img-menu {
+  z-index: 2;
+  position: relative;
 }
 
 .map {
@@ -251,67 +292,84 @@ input {
 
 .menu-list {
   border-radius: 15px 15px 0px 0px;
-  padding: 15px;
+  z-index: 100;
+  position: relative;
+  margin-top: -20px;
 }
 
-.menu-prix {
-  font-size: 1.5rem;
-}
-
-.menu-plat {
-  line-height: 0px;
+.plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 20px;
   background: white;
   border-radius: 15px;
-  padding: 0px 10px 15px 10px;
-  margin: 10px;
-  overflow: hidden;
+  padding-left: 8px;
+  width: 400px;
+}
+
+.plat:hover .menu-check {
+  visibility: visible;
+  display: block;
+  background: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  padding: 9.6px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.plat:hover .fa-circle-check {
+  -webkit-transform: rotate(0deg) scale(1);
+          transform: rotate(0deg) scale(1);
+  visibility: visible;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  font-size: 2rem;
+}
+
+.plat-header {
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 300px;
+  padding: 5px 0px 5px 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+.plat-price {
+  margin-right: 10px;
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+  width: 70px;
+  text-align: right;
 }
 
 .menu-check {
-  opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background: #99E2D0;
-  margin: 0px 0px 20px 0px;
+  visibility: hidden;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  overflow: hidden;
+  font-size: 2rem;
+  color: white;
 }
 
-.menu-check:hover,
-.menu-check:checked {
-  opacity: 1;
-}
-
-.plat-0 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-.plat-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.plat-3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.menu-check .fa-circle-check {
+  -webkit-transform: rotate(250deg) scale(0);
+          transform: rotate(250deg) scale(0);
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  font-size: 0rem;
 }
 /*# sourceMappingURL=style.css.map */
