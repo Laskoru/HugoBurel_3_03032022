@@ -1,9 +1,11 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-light: #E5E5E5;
-$color-dark: #4B4B4B;
-$breakpoints:(mobile: 599px, desktop: 600px);
+$color-light: #F6F6F6;
+$color-dark: #EAEAEA;
+$color-darker:#7E7E7E;
+$color-footer:#353535;
+$breakpoints:(mobile: 991px, desktop: 992px);
 $shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
 $hover: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;;
 $gradient:  linear-gradient(80deg, #9356dc 0%, #ff79da 100%);
@@ -15,6 +17,7 @@ $gradient:  linear-gradient(80deg, #9356dc 0%, #ff79da 100%);
     from { opacity: 0;}
       to { opacity: 1;}
 }
+
 
 @mixin mobile-only {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
@@ -31,26 +34,56 @@ html
     font-family: "roboto",Arial, Helvetica, sans-serif;
     @include desktop
     {
-        max-width: 30%;
+        max-width: 1500px;
         margin: auto;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 }
+nav
+{
+    @include desktop
+    {
+        display: flex;
+        flex-wrap: wrap;
+    
+        
+    }
+
+    
+}
 h1
 {
-    font-size: 1.9rem;
     margin-left: 20px;
+    @include mobile-only
+    {
+    font-size: 1.5rem;
+    
+    }
+    @include desktop
+    {
+        font-size: 2rem;
+    }
 }
 h3
 {
-    font-size: 1.2rem;
-    color: white;
+    font-size: 1rem;
 }
 h4
 {
     border-bottom: 4px solid $color-tertiary;
-    width: 30px;
     margin-left: 10px;
+    @include mobile-only
+    {
+    width: 30px;
+    }
+    @include desktop
+    {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: auto;
+        width: 150px;
+    }
+    
 }
 h5
 {
@@ -63,6 +96,18 @@ h6
 {
     font-size: 1.6rem;
     margin: 3px;
+}
+.white
+{
+    color: white;
+    @include desktop
+    {
+        font-size: 2rem;
+    }
+}
+.black
+{
+    color: black;
 }
 .uppercase
 {
@@ -88,6 +133,7 @@ h6
     justify-content: center;
     background-color: $color-dark;
     padding: 10px 0px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 7px 0px inset;
 }
 .localisation
 {
@@ -97,23 +143,33 @@ h6
 {  
     background: $color-light;  
 }
+.background-dark
+{
+    background: $color-dark;
+}
 .intro
 {
-    padding: 10px 0px 10px 0px;
+    padding: 10px 20px 10px 20px;
     text-align: center;
-    box-shadow: $shadow;
+    margin: auto
 }
 
 .btn
 {
     border: none;
-    margin-top: 20px;
-    background:$color-light;
+    margin: 20px;
     display: flex;
     align-items: center;
     transition: all 200ms;
+    box-shadow: $shadow;
+    cursor: pointer;
     &:hover{
         background-color: $color-tertiary;
+    }
+    @include desktop
+    {
+        padding: 0px 20px;
+        margin: auto;
     }
 }
 .btn:active
@@ -138,38 +194,65 @@ h6
     border-radius: 50px;
     box-shadow: $shadow;
 }
+.btn-radius2
+{
+    border-radius: 14px;
+}
 .btn-intro
 {
     border: none;
     background: $gradient;
-    padding: 0px 10px 0px 10px;
-    margin: 20px;
+    padding: 0px 15px 0px 15px;
+    margin: 20px auto;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-command
+{
+    text-align: center;
 }
 .img-restaurant
-{
+{       
+    border-radius: 15px 15px 0px 0px;
+    @include mobile-only
+    {
         display: flex;
         width: 100%;
         height: auto;
-        border-radius: 15px 15px 0px 0px;   
+       
+    }
+    @include desktop
+    {
+        width: 700px;
+        height: auto;
+    }   
 }
 .btn-number
 {
     background-color: #9356DC;
-    padding: 15px;
+    padding: 5px 8px;
     border-radius: 50%;
     margin-right: 30px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: white;
 }
 .btn-color
 {
-    color: $color-dark;
-    margin-right: 20px;
+    color: $color-darker;
+    margin-right: 40px;
+    font-size: 1.2rem;
 }
 .list-restaurants
 {
     padding: 5px;
     margin-top: 20px;
+    margin-bottom: 20px;
+    @include desktop
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 input
 {
@@ -200,17 +283,25 @@ input
     box-shadow: $shadow;
     transition: 200ms;
     cursor: pointer;
+    @include desktop
+    {
+        max-width: 700px;
+        margin: auto;
+        margin-top: 20px;
+        
+    }
     &:hover
     {
         box-shadow: $hover;
     }
 }
-.img-restaurant
+.intro-h1
 {
-    display: flex;
-    width: 100%;
-    height: auto;
-    border-radius: 15px 15px 0px 0px;
+    @include desktop
+    {
+        font-size: 2.5rem;
+        margin-right: 1200px;
+    }
 }
 .description-restaurant
 {
@@ -225,7 +316,8 @@ input
 }
 .footer
 {
-    background: $color-dark;
+    background: $color-footer;
+    padding: 10px;
 }
 .footer-logo
 {
@@ -246,9 +338,20 @@ input
 }
 .logo-menu
 {
+    @include mobile-only
+    {
     width: 50%;
+    }
     margin: auto;
     display: flex;
+    @include desktop
+    {
+        width: 300px;
+    }
+}
+.fa-arrow-left
+{
+    font-size: 2rem;
 }
 .header-menu
 {
@@ -257,8 +360,21 @@ input
 }
 .img-menu
 {
-    width: 100%;
     height: auto;
+    @include mobile-only
+    {
+        width: 100%;
+    }
+    @include desktop
+    {
+        display: flex;
+        width: 100%;
+        max-height: 300px;
+        margin: auto;
+        object-fit: cover;
+        
+    }
+    
 }
 .menu-header
 {
@@ -279,20 +395,18 @@ input
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    margin: 20px;
+    margin: 20px auto;
     background: white;
     border-radius: 15px;
     padding-left: 8px;
-    width: 400px;
+    box-shadow: $shadow;
     &:hover .menu-check
     {
         visibility: visible;
         display: block;
-        
         background: $color-tertiary;
         border-radius: 0px 15px 15px 0px;
-        padding: 9.6px;
-        transform-origin: right;
+        padding: 9px;
         
     }
     &:hover .fa-circle-check
@@ -302,7 +416,22 @@ input
         transform-origin:right;
         font-size: 2rem;
     }
+    @include desktop
+    {
+        width: 400px;
+    }
     
+}
+.menu-categorie
+{
+    @include desktop
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        
+    }
 }
 .plat-header
 {
@@ -340,3 +469,5 @@ ul
     }
 
 }
+
+  
