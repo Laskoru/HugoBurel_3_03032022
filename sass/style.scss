@@ -17,6 +17,15 @@ $gradient:  linear-gradient(80deg, #9356dc 0%, #ff79da 100%);
     from { opacity: 0;}
       to { opacity: 1;}
 }
+@keyframes right {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+@keyframes left {
+    from { transform: rotate(360deg);}
+    to { transform: rotate(0deg);}
+}
+
 
 
 @mixin mobile-only {
@@ -29,6 +38,7 @@ $gradient:  linear-gradient(80deg, #9356dc 0%, #ff79da 100%);
       @content;
     }
   }
+
 html
 {
     font-family: "roboto",Arial, Helvetica, sans-serif;
@@ -38,6 +48,37 @@ html
         margin: auto;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
+}
+body
+{
+    position: relative;
+}
+.load {
+    position: absolute;
+    top: calc(100% - 20px);
+    left: calc(100% - 20px);
+    border-bottom: 5px solid $color-primary;
+    border-top: 5px solid $color-secondary;
+    border-left: 5px solid $color-dark;
+    border-right: 5px solid $color-tertiary;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: right 2s linear infinite;
+  }
+.load1
+{
+    position:absolute;
+    top: 25px;
+    left: 25px;
+    border-bottom: 5px solid $color-primary;
+    border-top: 5px solid $color-secondary;
+    border-left: 5px solid $color-dark;
+    border-right: 5px solid $color-tertiary;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: left 2s linear infinite;
 }
 nav
 {
@@ -67,6 +108,10 @@ h1
 h3
 {
     font-size: 1rem;
+    @include desktop
+    {
+        font-size: 1.5rem;
+    }
 }
 h4
 {
@@ -80,7 +125,7 @@ h4
     {
         font-size: 1.5rem;
         text-align: center;
-        margin: auto;
+        margin: 10px auto;
         width: 150px;
     }
     
@@ -134,10 +179,15 @@ h6
     background-color: $color-dark;
     padding: 10px 0px 10px 0px;
     box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 7px 0px inset;
+    @include desktop
+    {
+        font-size: 1.5rem;
+    }
 }
 .localisation
 {
     margin-left: 15px;
+    
 }
 .background-light
 {  
@@ -275,6 +325,7 @@ input
 }
 .restaurant
 {
+    
     background-color: white;
     border-radius: 15px;
     line-height: 10px;
@@ -282,6 +333,7 @@ input
     padding-bottom: 10px;
     box-shadow: $shadow;
     transition: 200ms;
+    
     cursor: pointer;
     @include desktop
     {
@@ -387,7 +439,7 @@ input
     border-radius: 15px 15px 0px 0px;
     z-index: 100;
    position: relative;
-   margin-top: -20px;
+   margin-top: 20px;
 }
 .plat
 {
@@ -395,7 +447,7 @@ input
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    margin: 20px auto;
+    margin: 20px 10px;
     background: white;
     border-radius: 15px;
     padding-left: 8px;
