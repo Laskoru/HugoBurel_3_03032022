@@ -20,10 +20,12 @@
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    opacity: 1;
   }
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+    opacity: 0;
   }
 }
 
@@ -31,10 +33,12 @@
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    opacity: 1;
   }
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+    opacity: 0;
   }
 }
 
@@ -42,10 +46,12 @@
   from {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+    opacity: 1;
   }
   to {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    opacity: 0;
   }
 }
 
@@ -53,10 +59,36 @@
   from {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+    opacity: 1;
   }
   to {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes spinner-loading {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner-loading {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -73,38 +105,79 @@ html {
   }
 }
 
-body {
-  position: relative;
-}
-
 .load {
   position: absolute;
-  top: calc(100% - 20px);
-  left: calc(100% - 20px);
   border-bottom: 5px solid #9356DC;
   border-top: 5px solid #FF79DA;
   border-left: 5px solid #EAEAEA;
   border-right: 5px solid #99E2D0;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  -webkit-animation: right 2s linear infinite;
-          animation: right 2s linear infinite;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: right 2s linear;
+          animation: right 2s linear;
+  opacity: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .load {
+    top: 195px;
+    left: 295px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .load {
+    top: 75px;
+    left: 125px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .load {
+    top: 195px;
+    left: 295px;
+  }
 }
 
 .load1 {
   position: absolute;
-  top: 25px;
-  left: 25px;
   border-bottom: 5px solid #9356DC;
   border-top: 5px solid #FF79DA;
   border-left: 5px solid #EAEAEA;
   border-right: 5px solid #99E2D0;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  -webkit-animation: left 2s linear infinite;
-          animation: left 2s linear infinite;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: left 2s linear;
+          animation: left 2s linear;
+  opacity: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .load1 {
+    top: 200px;
+    left: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .load1 {
+    top: 80px;
+    left: 130px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .load1 {
+    top: 200px;
+    left: 300px;
+  }
+}
+
+.animation {
+  -webkit-animation: spinner-loading 2s linear;
+          animation: spinner-loading 2s linear;
 }
 
 @media screen and (min-width: 992px) {
@@ -121,7 +194,7 @@ h1 {
   margin-left: 20px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 1.5rem;
   }
@@ -130,6 +203,12 @@ h1 {
 @media screen and (min-width: 992px) {
   h1 {
     font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
   }
 }
 
@@ -148,7 +227,7 @@ h4 {
   margin-left: 10px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 768px) {
   h4 {
     width: 30px;
   }
@@ -197,14 +276,31 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 40%;
   margin: auto;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-header {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .logo-header {
+    width: 350px;
+  }
 }
 
 .img-menu {
   z-index: 2;
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .img-menu {
+    width: 100%;
+  }
 }
 
 .map {
@@ -262,7 +358,7 @@ h6 {
 }
 
 .btn:hover {
-  background-color: #99E2D0;
+  background-color: #99e2d08f;
 }
 
 @media screen and (min-width: 992px) {
@@ -316,7 +412,7 @@ h6 {
   border-radius: 15px 15px 0px 0px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 768px) {
   .img-restaurant {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -335,11 +431,24 @@ h6 {
 
 .btn-number {
   background-color: #9356DC;
-  padding: 5px 8px;
+  padding: 4px 8px;
   border-radius: 50%;
   margin-right: 30px;
   font-size: 1.2rem;
   color: white;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-number {
+    right: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .btn-number {
+    right: 32px;
+  }
 }
 
 .btn-color {
@@ -385,6 +494,7 @@ input {
 }
 
 .restaurant {
+  position: relative;
   background-color: white;
   border-radius: 15px;
   line-height: 10px;
@@ -430,15 +540,52 @@ input {
 
 .footer {
   background: #353535;
-  padding: 10px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 20px auto;
+    padding: auto 40px;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer-logo {
-  padding-top: 5px;
-  width: 40%;
-  margin-left: 15px;
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+@media screen and (max-width: 768px) {
+  .footer-logo {
+    padding-top: 5px;
+    width: 40%;
+    margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer-logo {
+    width: 300px;
+  }
 }
 
 .footer-menu {
@@ -458,7 +605,7 @@ input {
   display: flex;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 768px) {
   .logo-menu {
     width: 50%;
   }
@@ -485,9 +632,10 @@ input {
 
 .img-menu {
   height: auto;
+  z-index: 0;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 768px) {
   .img-menu {
     width: 100%;
   }
@@ -522,7 +670,7 @@ input {
   border-radius: 15px 15px 0px 0px;
   z-index: 100;
   position: relative;
-  margin-top: 20px;
+  margin: -20px auto;
 }
 
 .plat {
@@ -618,5 +766,14 @@ ul {
   transition: transform 300ms ease-in;
   transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
   font-size: 0rem;
+}
+
+.contact {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-menu {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

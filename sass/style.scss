@@ -1,11 +1,12 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$color-tertiary-opacity: #99e2d08f;
 $color-light: #F6F6F6;
 $color-dark: #EAEAEA;
 $color-darker:#7E7E7E;
 $color-footer:#353535;
-$breakpoints:(mobile: 991px, desktop: 992px);
+$breakpoints:(mobile: 768px, desktop: 992px, tablet:768px);
 $shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
 $hover: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;;
 $gradient:  linear-gradient(80deg, #9356dc 0%, #ff79da 100%);
@@ -18,15 +19,19 @@ $gradient:  linear-gradient(80deg, #9356dc 0%, #ff79da 100%);
       to { opacity: 1;}
 }
 @keyframes right {
-    from { transform: rotate(0deg);}
-    to { transform: rotate(360deg);}
+    from { transform: rotate(0deg);opacity: 1;}
+    to { transform: rotate(360deg);opacity: 0;}
 }
 @keyframes left {
-    from { transform: rotate(360deg);}
-    to { transform: rotate(0deg);}
+    from { transform: rotate(360deg);opacity: 1;}
+    to { transform: rotate(0deg);opacity: 0;}
 }
+@keyframes spinner-loading{
+    0% {opacity: 0;}
+    90% {opacity: 0;}
+    100%{opacity: 1;}
 
-
+}
 
 @mixin mobile-only {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
@@ -38,6 +43,11 @@ $gradient:  linear-gradient(80deg, #9356dc 0%, #ff79da 100%);
       @content;
     }
   }
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+      @content;  
+    }
+}
 
 html
 {
@@ -49,36 +59,65 @@ html
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 }
-body
-{
-    position: relative;
-}
 .load {
     position: absolute;
-    top: calc(100% - 20px);
-    left: calc(100% - 20px);
     border-bottom: 5px solid $color-primary;
     border-top: 5px solid $color-secondary;
     border-left: 5px solid $color-dark;
     border-right: 5px solid $color-tertiary;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: right 2s linear infinite;
+    width: 80px;
+    height: 80px;
+    animation: right 2s linear;
+    opacity: 0;
+    @include desktop
+    {
+        top: 195px;
+        left: 295px;
+    }
+    @include mobile-only
+    {
+        top: 75px;
+        left: 125px;
+    }
+    @include tablet
+    {
+        top: 195px;
+        left: 295px;
+    }
   }
 .load1
 {
-    position:absolute;
-    top: 25px;
-    left: 25px;
+    position: absolute;
     border-bottom: 5px solid $color-primary;
     border-top: 5px solid $color-secondary;
     border-left: 5px solid $color-dark;
     border-right: 5px solid $color-tertiary;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    animation: left 2s linear infinite;
+    width: 70px;
+    height: 70px;
+    animation: left 2s linear;
+    opacity: 0;
+    @include desktop
+    {
+        top: 200px;
+        left: 300px;
+    }
+    @include mobile-only
+    {
+        top: 80px;
+        left: 130px;
+
+    }
+    @include tablet
+    {
+        top: 200px;
+        left: 300px;
+    }
+}
+.animation
+{
+    animation: spinner-loading 2s linear;
 }
 nav
 {
@@ -103,6 +142,10 @@ h1
     @include desktop
     {
         font-size: 2rem;
+    }
+    @include tablet
+    {
+        font-size: 3rem;
     }
 }
 h3
@@ -161,14 +204,25 @@ h6
 .logo-header
 {
     display: flex;
-    width: 40%;
     margin: auto;
     text-align: center;
+    @include mobile-only
+    {
+        width: 200px;
+    }
+    @include desktop
+    {
+        width: 350px;
+    }
 }
 .img-menu
 {
     z-index: 2;
     position: relative;
+    @include tablet
+    {
+        width: 100%;
+    }
 }
 
 .map 
@@ -214,7 +268,7 @@ h6
     box-shadow: $shadow;
     cursor: pointer;
     &:hover{
-        background-color: $color-tertiary;
+        background-color: $color-tertiary-opacity;
     }
     @include desktop
     {
@@ -281,11 +335,20 @@ h6
 .btn-number
 {
     background-color: #9356DC;
-    padding: 5px 8px;
+    padding: 4px 8px;
     border-radius: 50%;
     margin-right: 30px;
     font-size: 1.2rem;
     color: white;
+    position: relative;
+    @include mobile-only
+    {
+        right: 10px;
+    }
+    @include desktop
+    {
+        right: 32px;
+    }
 }
 .btn-color
 {
@@ -312,6 +375,7 @@ input
 {
 	display: none;
 }
+
 .like input[type="checkbox"]:checked~.checked {
 	display: inline-block;
 }
@@ -325,7 +389,7 @@ input
 }
 .restaurant
 {
-    
+    position: relative;
     background-color: white;
     border-radius: 15px;
     line-height: 10px;
@@ -333,7 +397,6 @@ input
     padding-bottom: 10px;
     box-shadow: $shadow;
     transition: 200ms;
-    
     cursor: pointer;
     @include desktop
     {
@@ -369,20 +432,41 @@ input
 .footer
 {
     background: $color-footer;
-    padding: 10px;
+    padding: 20px;
+    @include desktop
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px auto;
+        padding: auto 40px;
+        font-size: 1.5rem;
+    }
+    @include tablet
+    {
+        display: flex;
+    }
 }
 .footer-logo
 {
+    filter: invert(100%);
+    @include mobile-only
+    {
     padding-top: 5px;
     width: 40%;
     margin-left: 15px;
-    filter: invert(100%);
+    }
+    @include desktop
+    {
+        width: 300px;
+    }
+    
 }
 .footer-menu
 {
     margin-top: 15px;
     margin-left: 20px;
-    color: white;
+    color: white;  
 }
 .footer-icon
 {
@@ -413,6 +497,7 @@ input
 .img-menu
 {
     height: auto;
+    z-index: 0;
     @include mobile-only
     {
         width: 100%;
@@ -438,8 +523,9 @@ input
 {
     border-radius: 15px 15px 0px 0px;
     z-index: 100;
-   position: relative;
-   margin-top: 20px;
+    position: relative;
+    margin: -20px auto;
+   
 }
 .plat
 {
@@ -520,6 +606,15 @@ ul
         font-size: 0rem;
     }
 
+}
+.contact
+{
+    text-decoration: none;
+    color: white;
+}
+.footer-menu
+{
+    cursor: pointer;
 }
 
   
