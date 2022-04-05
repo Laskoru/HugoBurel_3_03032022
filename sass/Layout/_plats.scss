@@ -1,0 +1,45 @@
+.plat
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px 10px;
+    background: white;
+    border-radius: 15px;
+    padding-left: 8px;
+    box-shadow: $shadow;
+    transition: 500ms;
+    overflow: hidden;
+    &:hover .background-green
+    {
+        transform: scaleX(1);
+        width: 60px;
+        .fa-check
+        {
+            transform: rotate(0deg); 
+        }
+    }
+    @include desktop
+    {
+        width: 400px;
+    }
+    
+}
+.plat-header
+{
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    width: 300px;
+    padding: 5px 0px 5px 0px;
+    
+}
+.plat-price
+{
+    
+    margin-right: 10px;
+    transition: all 400ms ease-out;
+    width: 70px;
+    text-align:right;
+}

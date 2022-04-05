@@ -1,0 +1,12 @@
+.like .checked 
+{
+	display: none;
+}
+
+.like input[type="checkbox"]:checked~.checked {
+	display: inline-block;
+}
+
+.like input[type="checkbox"]:checked~.unchecked {
+	display: none;
+}

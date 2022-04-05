@@ -1,0 +1,9 @@
+.img-menu
+{
+    z-index: 2;
+    position: relative;
+    @include tablet
+    {
+        width: 100%;
+    }
+}

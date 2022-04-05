@@ -1,21 +1,133 @@
-
 @import "./Utils/variables";
-@import "./Utils/mixins";
-@import "./Utils/functions";
-@import "./Utils/loading";
-@import "./Layout/footer";
-@import "./Layout/plats";
-@import "./Layout/img-menu";
-@import "./Compoments/like";
-@import "./Compoments/check";
 
+@-webkit-keyframes check {
+    from { opacity: 0;}
+      to { opacity: 1;}
+}
+@keyframes check {
+    from { opacity: 0;}
+      to { opacity: 1;}
+}
+@keyframes right {
+    from { transform: rotate(0deg);opacity: 1;}
+    to { transform: rotate(360deg);opacity: 0;}
+}
+@keyframes left {
+    from { transform: rotate(360deg);opacity: 1;}
+    to { transform: rotate(0deg);opacity: 0;}
+}
+@keyframes spinner-loading{
+    0% {opacity: 0;}
+    90% {opacity: 0;}
+    100%{opacity: 1;}
 
+}
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      @content;
+    }
+  }
+  @mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+      @content;
+    }
+  }
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+      @content;  
+    }
+}
+
+html
+{
+    font-family: "roboto",Arial, Helvetica, sans-serif;
+    @include desktop
+    {
+        max-width: 1500px;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+}
+.load {
+    position: absolute;
+    border-bottom: 5px solid $color-primary;
+    border-top: 5px solid $color-secondary;
+    border-left: 5px solid $color-dark;
+    border-right: 5px solid $color-tertiary;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: right 2s linear;
+    opacity: 0;
+    @include desktop
+    {
+        top: 195px;
+        left: 295px;
+    }
+    @include mobile-only
+    {
+        top: 75px;
+        left: 125px;
+    }
+    @include tablet
+    {
+        top: 195px;
+        left: 295px;
+    }
+  }
+.load1
+{
+    position: absolute;
+    border-bottom: 5px solid $color-primary;
+    border-top: 5px solid $color-secondary;
+    border-left: 5px solid $color-dark;
+    border-right: 5px solid $color-tertiary;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: left 2s linear;
+    opacity: 0;
+    @include desktop
+    {
+        top: 200px;
+        left: 300px;
+    }
+    @include mobile-only
+    {
+        top: 80px;
+        left: 130px;
+
+    }
+    @include tablet
+    {
+        top: 200px;
+        left: 300px;
+    }
+}
+.animation
+{
+    animation: spinner-loading 2s linear;
+}
+nav
+{
+    @include desktop
+    {
+        display: flex;
+        flex-wrap: wrap;
+    
+        
+    }
+
+    
+}
 h1
 {
     margin-left: 20px;
     @include mobile-only
     {
     font-size: 1.5rem;
+    
     }
     @include desktop
     {
@@ -63,29 +175,6 @@ h6
     font-size: 1.6rem;
     margin: 3px;
 }
-html
-{
-    font-family: "roboto",Arial, Helvetica, sans-serif;
-    @include desktop
-    {
-        max-width: 1500px;
-        margin: auto;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    }
-}
-nav
-{
-    @include desktop
-    {
-        display: flex;
-        flex-wrap: wrap;
-    
-        
-    }
-
-    
-}
-
 .white
 {
     color: white;
@@ -114,6 +203,15 @@ nav
     @include desktop
     {
         width: 350px;
+    }
+}
+.img-menu
+{
+    z-index: 2;
+    position: relative;
+    @include tablet
+    {
+        width: 100%;
     }
 }
 
@@ -172,7 +270,7 @@ nav
 {
     
     color: $color-secondary;
-    box-shadow: $color-secondary (0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: $color-secondary(0, 0, 0, 0.35) 0px 5px 15px;
     .btn-color
     {
         color: $color-secondary;
@@ -263,11 +361,51 @@ input
 {
     display: none;
 }
+.like .checked 
+{
+	display: none;
+}
+
+.like input[type="checkbox"]:checked~.checked {
+	display: inline-block;
+}
+
+.like input[type="checkbox"]:checked~.unchecked {
+	display: none;
+}
 .checked
 {
     color: #FF79DA;
 }
-
+.background-green
+{
+    background: $color-tertiary;
+    width: 0px;
+    height: 60px;
+    border-radius: 0px 15px 15px 0px;
+    transition: 500ms ease-in-out;
+    transform-origin: right;
+    transform: translate(50%);
+    
+.cercle
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    background: white;
+    margin: 15px auto;
+    text-align: center;
+    
+.fa-check
+{
+    color: $color-tertiary;
+    margin-top: 5px;
+    font-size: 1.1rem;
+    transition: 800ms;
+    transform: rotate(360deg);
+}
+}
+}
 .restaurant
 {
     position: relative;
@@ -309,6 +447,49 @@ input
     float: right;
     margin-right: 30px;
     font-size: 2rem;
+}
+.footer
+{
+    background: $color-footer;
+    padding: 20px;
+    @include desktop
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px auto;
+        padding: auto 40px;
+        font-size: 1.5rem;
+    }
+    @include tablet
+    {
+        display: flex;
+    }
+}
+.footer-logo
+{
+    filter: invert(100%);
+    @include mobile-only
+    {
+    padding-top: 5px;
+    width: 40%;
+    margin-left: 15px;
+    }
+    @include desktop
+    {
+        width: 300px;
+    }
+    
+}
+.footer-menu
+{
+    margin-top: 15px;
+    margin-left: 20px;
+    color: white;  
+}
+.footer-icon
+{
+    margin-right: 5px;
 }
 .logo-menu
 {
@@ -365,12 +546,38 @@ input
     margin: -20px auto;
    
 }
-
+.plat
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px 10px;
+    background: white;
+    border-radius: 15px;
+    padding-left: 8px;
+    box-shadow: $shadow;
+    transition: 500ms;
+    overflow: hidden;
+    &:hover .background-green
+    {
+        transform: scaleX(1);
+        width: 60px;
+    }
+    &:hover .fa-check
+    {
+        transform: rotate(0deg);
+    }
+    @include desktop
+    {
+        width: 400px;
+    }
+    
+}
 .menu-categorie
 {
     @include desktop
     {
-        justify-content: space-between;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -378,12 +585,27 @@ input
         
     }
 }
-
+.plat-header
+{
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    width: 300px;
+    padding: 5px 0px 5px 0px;
+    
+}
 ul
 {
     list-style: none;
 }
-
+.plat-price
+{
+    
+    margin-right: 10px;
+    transition: all 400ms ease-out;
+    width: 70px;
+    text-align:right;
+}
 .menu-check
 {
     visibility: hidden;

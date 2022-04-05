@@ -1,0 +1,43 @@
+.footer
+{
+    background: $color-footer;
+    padding: 20px;
+    @include desktop
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px auto;
+        padding: auto 40px;
+        font-size: 1.5rem;
+    }
+    @include tablet
+    {
+        display: flex;
+    }
+}
+.footer-logo
+{
+    filter: invert(100%);
+    @include mobile-only
+    {
+    padding-top: 5px;
+    width: 40%;
+    margin-left: 15px;
+    }
+    @include desktop
+    {
+        width: 300px;
+    }
+    
+}
+.footer-menu
+{
+    margin-top: 15px;
+    margin-left: 20px;
+    color: white;  
+}
+.footer-icon
+{
+    margin-right: 5px;
+}
