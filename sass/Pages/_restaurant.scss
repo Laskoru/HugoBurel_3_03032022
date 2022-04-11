@@ -1,0 +1,34 @@
+.restaurant
+{
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    line-height: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    box-shadow: $shadow;
+    transition: 200ms;
+    cursor: pointer;
+    @include desktop
+    {
+        max-width: 700px;
+        margin: auto;
+        margin-top: 20px;
+        
+    }
+    &:hover
+    {
+        box-shadow: $hover;
+    }
+}
+.list-restaurants
+{
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include desktop
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

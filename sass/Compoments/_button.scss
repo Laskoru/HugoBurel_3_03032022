@@ -1,0 +1,104 @@
+.btn
+{
+    border: none;
+    margin: 20px;
+    padding: auto 40px;
+    display: flex;
+    align-items: center;
+    transition: all 200ms;
+    box-shadow: $shadow;
+    cursor: pointer;
+    &:hover{
+        background-color: $color-tertiary-opacity;
+    }
+    @include desktop
+    {
+        padding: 0px 20px;
+        margin: auto;
+    }
+}
+.btn:active
+{
+    
+    color: $color-secondary;
+    box-shadow: $color-secondary (0, 0, 0, 0.35) 0px 5px 15px;
+    .btn-color
+    {
+        color: $color-secondary;
+    }
+    
+    .btn-number
+    {
+        color: $color-tertiary;
+        background: $color-secondary;
+    }
+    
+}
+.btn-radius
+{
+    border-radius: 50px;
+    box-shadow: $shadow;
+}
+.btn-radius2
+{
+    border-radius: 14px;
+}
+.btn-intro
+{
+    border: none;
+    background: $gradient;
+    margin: 20px auto;
+    align-items: center;
+    cursor: pointer;
+    @include mobile-only
+    {
+        font-size: 0.9rem;
+        padding: 15px 40px;
+    }
+    @include desktop
+    {
+        font-size: 1.8rem;
+        padding: 20px 40px;
+    }
+}
+
+.btn-command
+{
+    text-align: center;
+    
+}
+.btn-footer
+{
+    border: none;
+    background: $gradient;
+    cursor: pointer;
+    @include mobile-only
+    {
+        margin: 25px 0px 60px 0px;
+        padding: 0px 40px;
+    }
+}
+.btn-number
+{
+    background-color: #9356DC;
+    padding: 4px 8px;
+    border-radius: 50%;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    color: white;
+    position: relative;
+    @include mobile-only
+    {
+        right: 10px;
+    }
+    @include desktop
+    {
+        right: 32px;
+    }
+}
+.btn-color
+{
+    color: $color-darker;
+    margin-right: 20px;
+    font-size: 1.2rem;
+}

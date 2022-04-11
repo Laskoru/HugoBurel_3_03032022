@@ -1,0 +1,61 @@
+h1
+{
+    margin-left: 20px;
+    @include mobile-only
+    {
+    font-size: 1.6rem;
+    }
+    @include desktop
+    {
+        font-size: 2rem;
+    }
+    @include tablet
+    {
+        font-size: 3rem;
+    }
+}
+h2
+{
+    @include mobile-only
+    {
+        font-size: 1rem;
+        font-weight: lighter;
+    }
+}
+h3
+{
+    @include desktop
+    {
+        font-size: 1.5rem;
+    }
+    @include mobile-only
+    {
+        font-size: 1rem;
+    }
+}
+h4
+{
+    @include mobile-only
+    {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    @include desktop
+    {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    
+}
+h5
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1rem;
+    margin: 3px;  
+}
+h6
+{
+    font-size: 1.6rem;
+    margin: 3px;
+}

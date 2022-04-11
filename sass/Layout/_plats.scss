@@ -1,9 +1,20 @@
+.menu-categorie
+{
+    @include desktop
+    {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        
+    }
+}
 .plat
 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
     margin: 20px 10px;
     background: white;
     border-radius: 15px;
@@ -11,18 +22,31 @@
     box-shadow: $shadow;
     transition: 500ms;
     overflow: hidden;
-    &:hover .background-green
+    &:hover
     {
-        transform: scaleX(1);
-        width: 60px;
+        .background-green
+        {
+            @include mobile-only
+            {
+                width: 60px;
+                margin-right: 20px;
+            }
+            @include desktop
+            {
+                height: 55px;
+                width: 310px;
+            }
+        }
         .fa-check
         {
-            transform: rotate(0deg); 
+            transform: rotate(0deg);
         }
-    }
+    } 
     @include desktop
     {
-        width: 400px;
+        text-align: center;
+        flex-direction: column;
+        height: 120px;
     }
     
 }
@@ -42,4 +66,30 @@
     transition: all 400ms ease-out;
     width: 70px;
     text-align:right;
+}
+.description-restaurant
+{
+    margin-left: 15px;
+    line-height: 5px;
+}
+
+.header-menu
+{
+    display: flex;
+    align-items: center;
+}
+
+.menu-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-list
+{
+    border-radius: 15px 15px 0px 0px;
+    z-index: 100;
+    position: relative;
+    margin: -20px auto;
+   
 }

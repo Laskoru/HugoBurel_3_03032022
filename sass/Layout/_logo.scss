@@ -1,0 +1,27 @@
+.logo-header
+{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    @include mobile-only
+    {
+        width: 200px;
+    }
+    @include desktop
+    {
+        width: 350px;
+    }
+}
+.logo-menu
+{
+    @include mobile-only
+    {
+    width: 50%;
+    }
+    margin: auto;
+    display: flex;
+    @include desktop
+    {
+        width: 300px;
+    }
+}

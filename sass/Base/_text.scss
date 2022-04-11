@@ -1,0 +1,51 @@
+.background-light
+{  
+    background: $color-light;  
+}
+.background-dark
+{
+    background: $color-dark;
+}
+.white
+{
+    color: white;
+    @include desktop
+    {
+        font-size: 2rem;
+    }
+}
+.black
+{
+    color: black;
+}
+.checked
+{
+    color: #FF79DA;
+}
+.uppercase
+{
+    text-transform: uppercase;
+}
+ul
+{
+    list-style: none;
+}
+.border-bottom
+{
+    border-bottom: 3px solid $color-tertiary;
+    @include mobile-only
+    {
+        width: 42px;
+    }
+    @include desktop
+    {
+        width: 100%;
+    }
+}
+.center
+{
+    @include desktop
+    {
+        text-align: center;
+    }
+}

@@ -1,0 +1,16 @@
+.img-restaurant
+{       
+    border-radius: 15px 15px 0px 0px;
+    @include mobile-only
+    {
+        display: flex;
+        width: 100%;
+        height: auto;
+       
+    }
+    @include desktop
+    {
+        width: 700px;
+        height: auto;
+    }   
+}

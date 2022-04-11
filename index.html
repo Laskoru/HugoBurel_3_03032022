@@ -4,78 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sass/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/eea8d295f1.js" crossorigin="anonymous"></script>
     <title>ohmyfood</title>
 </head>
+<body>
 <header>
     <div>
-        <img class="logo-header" src="./images/logo/ohmyfood.png"/>
+        <img class="logo-header" src="./images/logo/ohmyfood.png" alt="Logo du site web"/>
     </div>
     <div class="map">
         <i class="fa-solid fa-location-dot"></i>
         <a class="localisation">Paris, Belleville</a>
     </div>
     <div class="intro background-light">
-        <div>
-            <h1>Réservez le menu qui vous convient</h1>
-        </div>
-        <div>
-            Découvrez des restaurant d'exception, sélectionné par nos soins.
-        </div>
-        <button class="btn-intro btn-radius" type="button"><h3 class="white">Explorer nos restaurant</h3></button>
+            <h1>Réservez le menu qui vous convient</h1>        
+            <h2>Découvrez des restaurant d'exception, sélectionné par nos soins.</h2>   
+            <button class="btn-intro btn-radius white" type="button">Explorer nos restaurant</button>
     </div>
 
 </header>
 <nav>
-    <a><h1 class="intro-h1">Fonctionnement</h1></a>
+    <a class="intro-h1">Fonctionnement</a>
         <div class="btn background-dark btn-radius2">
         <a class="btn-number">1</a>
         <i class="fa-solid fa-mobile-screen-button btn-color"></i>
-        <a><h3 class="black">Choisissez un restaurant</h3></a>
+        <a class="black"><h3>Choisissez un restaurant</h3></a>
         </div>
         
        
         <div class="btn background-dark btn-radius2">
             <a class="btn-number">2</a>
         <i class="fa-solid fa-bars btn-color"></i>
-        <a><h3 class="black">Composez votre menu</h3></a>
+        <a class="black"><h3>Composez votre menu</h3></a>
         </div>
         
     
         <div class="btn background-dark btn-radius2">
             <a class="btn-number">3</a>
         <i class="fa-solid fa-store btn-color"></i>
-        <a><h3 class="black">Dégustez au restaurant</h3></a>
+        <a class="black"><h3>Dégustez au restaurant</h3></a>
         </div>
         
         
 </nav>
-<body>
-    <div class="list-restaurants background-light">
-        <a><h1 class="intro-h1">Restaurants</h1></a>
-            <a href="./la_palette_du_gout.html">
+    <section class="list-restaurants background-light">
+        <a class="intro-h1">Restaurants</a>
+            <a href="./la_palette_du_gout.html" >
                 
-            <div class="restaurant">
+            <article class="restaurant">
                 <div class="load"></div>
                 <div class="load1"></div>
                 <div class="animation">
-                <img class="img-restaurant" src="./images/restaurants/lapalettedugout.jpg"/>
+                <img class="img-restaurant" src="./images/restaurants/lapalettedugout.jpg" alt="Restaurant la palette du gôut"/>
                     <div class="description-restaurant">
                         <label class="like">
                             <input type="checkbox"/>
                             <i class="fa-regular fa-heart unchecked"></i>
                             <i class="fa-solid fa-heart checked"></i>
-                        </label>
-                <a><h2>La Palette du goût</h2></a>           
-                <a>Ménilmontant</a>           
+                        </label>   
+                        <a><h4>La Palette du goût</h4></a>           
+                        <a>Ménilmontant</a>          
                     </div>
                 </div>
-            </div>
+            </article>
             </a>
             <a href="./la_note_enchantee.html">
-            <div class="restaurant">
+            <article class="restaurant">
                 <div class="load"></div>
                 <div class="load1"></div>
                 <div class="animation">
@@ -86,14 +82,14 @@
                             <i class="fa-regular fa-heart unchecked"></i>
                             <i class="fa-solid fa-heart checked"></i>
                         </label>
-                <a><h2>La note enchantée</h2></a>          
+                <a><h4>La note enchantée</h4></a>          
                 <a>Charonne</a>
                     </div>
                 </div>
-            </div>
+            </article>
             </a>
             <a href="./a_la_francaise.html">
-            <div class="restaurant">
+            <article class="restaurant">
                 <div class="load"></div>
                 <div class="load1"></div>
                 <div class="animation">
@@ -104,14 +100,14 @@
                             <i class="fa-regular fa-heart unchecked"></i>
                             <i class="fa-solid fa-heart checked"></i>
                         </label>
-                <a><h2>A la française</h2></a>            
+                <a><h4>A la française</h4></a>            
                 <a>Cité Rouge</a>
                     </div>
                 </div>
-            </div>
+            </article>
             </a>
             <a href="./le_delice_des_sens.html">
-            <div class="restaurant">
+            <article class="restaurant">
                 <div class="load"></div>
                 <div class="load1"></div>
                 <div class="animation">
@@ -122,13 +118,13 @@
                             <i class="fa-regular fa-heart unchecked"></i>
                             <i class="fa-solid fa-heart checked"></i>
                         </label>
-                <a><h2>Le délice des sens</h2></a>           
+                <a><h4>Le délice des sens</h4></a>           
                 <a>Folie-Méricourt</a>
                     </div>
                     </div>    
-            </div>
+            </article>
             </a>
-    </div>
+    </section>
         <footer>
             <div class="footer fond-gris-fonce">
                 <img class="footer-logo" src="./images/logo/ohmyfood.png">

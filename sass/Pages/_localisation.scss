@@ -1,0 +1,18 @@
+.map 
+{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: $color-dark;
+    padding: 10px 0px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 7px 0px inset;
+    @include desktop
+    {
+        font-size: 1.5rem;
+    }
+}
+.localisation
+{
+    margin-left: 15px;
+    
+}

@@ -1,33 +1,58 @@
 .background-green
 {
     background: $color-tertiary;
-    width: 0px;
-    height: 60px;
-    border-radius: 0px 15px 15px 0px;
-    transition: 500ms ease-in-out;
-    transform-origin: right;
-    transform: translate(50%);
+    @include mobile-only
+    {
+        width: 0px;
+        height: 60px;
+        border-radius: 0px 15px 15px 0px;
+        transition: 500ms ease-in-out;
+        transform-origin: right;
+        transform: translate(50%);
+    }
+    @include desktop
+    {
+        margin-left: -10px;
+        align-items: center;
+        width: 25px;
+        height: 0px;
+        transform-origin: bottom;
+        transition: 500ms ease-in-out;
+    }
 } 
 .cercle
 {
-    width: 25px;
-    height: 25px;
     border-radius: 20px;
     background: white;
     margin: 15px auto;
     text-align: center;
+    @include mobile-only
+    {
+        width: 25px;
+        height: 25px;
+    }
+    @include desktop
+    {
+        margin-top: 8px;
+        width: 40px;
+        height: 40px;
+    }
 }
 .fa-check
 {
     color: $color-tertiary;
-    margin-top: 5px;
-    font-size: 1.1rem;
     transition: 500ms ease-in;
     transform: rotate(360deg);
     cursor: pointer;
-
-.fa-check:link
-{
-    color: $color-secondary;   
-}
+    @include mobile-only
+    {
+        font-size: 1.1rem;
+        margin-top: 5px;
+    }
+    @include desktop
+    {
+        font-size: 1.8rem;
+        margin-top: 7px;
+    }
+    
 }

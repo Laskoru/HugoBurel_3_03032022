@@ -1,3 +1,9 @@
+.fa-heart
+{
+    float: right;
+    margin-right: 30px;
+    font-size: 2rem;
+}
 .like .checked 
 {
 	display: none;
@@ -9,4 +15,8 @@
 
 .like input[type="checkbox"]:checked~.unchecked {
 	display: none;
+}
+input
+{
+    display: none;
 }
