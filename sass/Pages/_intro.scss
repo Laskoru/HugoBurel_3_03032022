@@ -1,0 +1,32 @@
+.intro
+{
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    margin: auto
+}
+.intro-h1
+{
+    font-weight: bold;
+    @include desktop
+    {
+        font-size: 2.5rem;
+        margin: 30px 1200px 30px 30px;
+    }
+    @include mobile-only
+    {  
+        font-size: 1.5rem;
+        
+        
+    }
+}
+nav
+{
+    margin-bottom: 40px;
+    @include desktop
+    {
+        display: flex;
+        flex-wrap: wrap;
+    
+        
+    }   
+}
