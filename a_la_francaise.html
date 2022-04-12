@@ -4,49 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sass/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/eea8d295f1.js" crossorigin="anonymous"></script>
     <title>ohmyfood</title>
 </head>
+<body>
 <header>
     <div class="header-menu">
         <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <img class="logo-menu" src="./images/logo/ohmyfood.png"/>
+        <img class="logo-menu" src="./images/logo/ohmyfood.png" alt="Logo du site web"/>
     </div>
     </header>
-<body>
+
     
-        <img class=img-menu src="./images/restaurants/alafrancaise.jpg">
+        <img class=img-menu src="./images/restaurants/alafrancaise.jpg" alt="Image du restaurant">
         <div class="menu-list background-light">
-        <div class="menu-header">
-            <span class="shrikhand"><h1>A la française</h1></span>
-            <label class="like">
-                <input type="checkbox"/>
-            <i class="fa-regular fa-heart unchecked"></i>
-            <i class="fa-solid fa-heart checked"></i>
-            </label>
-        </div>
+            <div class="menu-header">
+                <div class="shrikhand"><h1>A la française</h1></div>
+                    <label class="like">
+                        <input type="checkbox"/>
+                        <i class="fa-regular fa-heart unchecked"></i>
+                        <i class="fa-solid fa-heart checked"></i>
+                    </label>
+                </div>
         <div class="bloc-plats">
-        <h4 class="uppercase">entrées</h4>
+            <h4 class="uppercase border-bottom center">entrées</h4>
                 <div class="menu-categorie">
                     <div class="plat">
-                            <div class="plat-header">                       
+                        <div class="plat-header">                       
                             <h5>Tartare de poulpe acidulé</h5>
                             Au zests d'orange
-                            </div>                       
-                            <div class="plat-price">
-                                <h6>25€</h6>
-                            </div>
-
-                            <div>
-                                <label class="like menu-check">
-                                <input type="checkbox"/>
-                                <i class="fa-regular fa-circle-check unchecked"></i>
-                                <i class="fa-regular fa-circle-check checked"></i>
-                                </label>
-                            </div>
-                      
-                      
+                        </div>                       
+                        <div class="plat-price">
+                            <h6>25€</h6>
+                        </div>
+                        <div class="background-green"><div class="cercle"><i class="fa-solid fa-check"></i></div></div>                                           
                     </div>
                     <div class="plat">
                         <div class="plat-header">                       
@@ -56,13 +48,7 @@
                         <div class="plat-price">
                             <h6>35€</h6>
                         </div>
-                        <div>
-                            <label class="like menu-check">
-                            <input type="checkbox"/>
-                            <i class="fa-regular fa-circle-check unchecked"></i>
-                            <i class="fa-regular fa-circle-check checked"></i>
-                            </label>
-                        </div>            
+                        <div class="background-green"><div class="cercle"><i class="fa-solid fa-check"></i></div></div>           
                     </div>
                     <div class="plat">
                         <div class="plat-header">                       
@@ -72,141 +58,88 @@
                         <div class="plat-price">
                             <h6>20€</h6>
                         </div>
-                        <div>
-                            <label class="like menu-check">
-                            <input type="checkbox"/>
-                            <i class="fa-regular fa-circle-check unchecked"></i>
-                            <i class="fa-regular fa-circle-check checked"></i>
-                            </label>
-                        </div>
-      
-      
-                    </div>   
+                        <div class="background-green"><div class="cercle"><i class="fa-solid fa-check"></i></div></div>   
+                    </div>
                 </div>
-        </div>
-        <div class="bloc-plats">
-                <h4 class="uppercase">plats</h4>
-                <div class="menu-categorie">
-                    <div class="plat">
+            </div>
+            <div class="bloc-plats">
+                <h4 class="uppercase border-bottom center">plats</h4>
+                    <div class="menu-categorie">
+                        <div class="plat">
                             <div class="plat-header">                       
-                            <h5>Coquilles Saint-Jacques</h5>
-                            Accompagnée d'une purée de panais
+                                <h5>Coquilles Saint-Jacques</h5>
+                                Accompagnée d'une purée de panais
                             </div>                       
                             <div class="plat-price">
                                 <h6>40€</h6>
                             </div>
-
-                            <div>
-                                <label class="like menu-check">
-                                <input type="checkbox"/>
-                                <i class="fa-regular fa-circle-check unchecked"></i>
-                                <i class="fa-regular fa-circle-check checked"></i>
-                                </label>
-                            </div>
-                      
-                      
-                    </div>
-                    <div class="plat">
-                        <div class="plat-header">                       
-                            <h5>Magret de canard</h5>
-                            et parmentier de pommes de terres
-                        </div>                       
-                        <div class="plat-price">
-                            <h6>35€</h6>
+                            <div class="background-green"><div class="cercle"><i class="fa-solid fa-check"></i></div></div>                     
                         </div>
-                        <div>
-                            <label class="like menu-check">
-                            <input type="checkbox"/>
-                            <i class="fa-regular fa-circle-check unchecked"></i>
-                            <i class="fa-regular fa-circle-check checked"></i>
-                            </label>
-                        </div>            
-                    </div>
-                    <div class="plat">
-                        <div class="plat-header">                       
-                            <h5>Pigeonneau d'Ille-et-Vilaine</h5>
-                            Sur son lit de gnocchis aux légumes
-                        </div>                       
-                        <div class="plat-price">
-                            <h6>44€</h6>
-                        </div>
-                        <div>
-                            <label class="like menu-check">
-                            <input type="checkbox"/>
-                            <i class="fa-regular fa-circle-check unchecked"></i>
-                            <i class="fa-regular fa-circle-check checked"></i>
-                            </label>
-                        </div>
-      
-      
-                    </div>   
-                </div>
-        </div>
-        <div class="bloc-plats">
-                <h4 class="uppercase">desserts</h4>
-                <div class="menu-categorie">
-                    <div class="plat">
+                        <div class="plat">
                             <div class="plat-header">                       
-                            <h5>Pétales de violettes glacés</h5>
-                            et purée de noisettes
+                                <h5>Magret de canard</h5>
+                                et parmentier de pommes de terres
+                            </div>                       
+                            <div class="plat-price">
+                                <h6>35€</h6>
+                            </div>
+                            <div class="background-green"><div class="cercle"><i class="fa-solid fa-check"></i></div></div>            
+                        </div>
+                        <div class="plat">
+                            <div class="plat-header">                       
+                                <h5>Pigeonneau d'Ille-et-Vilaine</h5>
+                                Sur son lit de gnocchis aux légumes
+                            </div>                       
+                            <div class="plat-price">
+                                <h6>44€</h6>
+                            </div>
+                            <div class="background-green"><div class="cercle"><i class="fa-solid fa-check"></i></div></div>          
+                        </div>   
+                    </div>
+            </div>
+            <div class="bloc-plats">
+                <h4 class="uppercase border-bottom center">desserts</h4>
+                    <div class="menu-categorie">
+                        <div class="plat">
+                            <div class="plat-header">                       
+                                <h5>Pétales de violettes glacés</h5>
+                                et purée de noisettes
                             </div>                       
                             <div class="plat-price">
                                 <h6>18€</h6>
                             </div>
-
-                            <div>
-                                <label class="like menu-check">
-                                <input type="checkbox"/>
-                                <i class="fa-regular fa-circle-check unchecked"></i>
-                                <i class="fa-regular fa-circle-check checked"></i>
-                                </label>
+                            <div class="background-green"><div class="cercle"><i class="fa-solid fa-check"></i></div></div>                                          
+                        </div>
+                        <div class="plat">
+                            <div class="plat-header">                       
+                                <h5>Fondant au chocolat</h5>
+                                Revisité
+                            </div>                       
+                            <div class="plat-price">
+                                <h6>22€</h6>
                             </div>
-                      
-                      
-                    </div>
-                    <div class="plat">
-                        <div class="plat-header">                       
-                            <h5>Fondant au chocolat</h5>
-                            Revisité
-                        </div>                       
-                        <div class="plat-price">
-                            <h6>22€</h6>
+                            <div class="background-green"><div class="cercle"><i class="fa-solid fa-check"></i></div></div>            
                         </div>
-                        <div>
-                            <label class="like menu-check">
-                            <input type="checkbox"/>
-                            <i class="fa-regular fa-circle-check unchecked"></i>
-                            <i class="fa-regular fa-circle-check checked"></i>
-                            </label>
-                        </div>            
-                    </div>
-                    <div class="plat">
-                        <div class="plat-header">                       
-                            <h5>Millefeuille croustillant</h5>
-                            Myrtilles et pâte d'amande
-                        </div>                       
-                        <div class="plat-price">
-                            <h6>23€</h6>
+                        <div class="plat">
+                            <div class="plat-header">                       
+                                <h5>Millefeuille croustillant</h5>
+                                Myrtilles et pâte d'amande
+                            </div>                       
+                            <div class="plat-price">
+                                <h6>23€</h6>
+                            </div>
+                            <div class="background-green"><div class="cercle"><i class="fa-solid fa-check"></i></div></div>    
                         </div>
-                        <div>
-                            <label class="like menu-check">
-                            <input type="checkbox"/>
-                            <i class="fa-regular fa-circle-check unchecked"></i>
-                            <i class="fa-regular fa-circle-check checked"></i>
-                            </label>
-                        </div>
-      
-                    </div>
                     </div>
                     <div class="btn-command">
-                        <button class="btn-intro btn-radius" type="button"><h3 class="white">Commander</h3></button>
-                        </div>   
-                </div>
-        </div>           
+                        <h3><button class="btn-intro btn-radius white" type="button">Commander</button></h3>
+                    </div>   
+            </div>
+        </div>          
 
 <footer>
     <div class="footer fond-gris-fonce">
-        <img class="footer-logo" src="./images/logo/ohmyfood.png">
+        <img class="footer-logo" src="./images/logo/ohmyfood.png" alt="Logo du site web">
         <div class="footer-menu">
             <i class="fa-solid fa-utensils footer-icon"></i>
             <span>Proposer un restaurant</span>

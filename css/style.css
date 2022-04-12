@@ -484,6 +484,11 @@ html {
   }
 }
 
+.nom-restaurant {
+  text-decoration: none;
+  color: black;
+}
+
 .background-light {
   background: #F6F6F6;
 }
