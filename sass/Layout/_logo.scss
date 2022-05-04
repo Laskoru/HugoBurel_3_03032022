@@ -5,21 +5,35 @@
     text-align: center;
     @include mobile-only
     {
-        width: 200px;
+        width: 160px;
+        padding-top: 10px;
     }
     @include desktop
     {
         width: 350px;
+        margin-top: 15px;
+    }
+    @include tablet
+    {
+        width: 300px;
+        padding: 10px 10px 0px 10px;
     }
 }
 .logo-menu
 {
+    display: flex;
+    margin: auto;
+    text-align: center;
     @include mobile-only
     {
-    width: 50%;
+        width: 160px;
+        padding: 10px 10px 10px 0px;
     }
-    margin: auto;
-    display: flex;
+    @include tablet
+    {
+        width: 300px;
+        padding: 10px 10px 10px 0px;
+    }
     @include desktop
     {
         width: 300px;

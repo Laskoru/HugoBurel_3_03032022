@@ -1,0 +1,33 @@
+.new, .new:link
+{
+    position: absolute;
+    color: darken($color: $color-tertiary, $amount: 50%);
+    background-color: $color-tertiary;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    @include mobile-only
+    {
+        padding: 10px 11px;
+        top: 10%;
+        right: 5%;
+        transform: translate(-10%, -10%);
+
+    }
+    @include desktop
+    {
+        font-size: 1.6rem;
+        top: 5%;
+        right: 1%;
+        transform: translate(-10%, -5%);
+        padding: 15px 10px 15px 10px;
+    }
+    @include tablet
+    {
+        font-size:  1.8rem;   
+        top: 5%;
+        right: 1%;
+        transform: translate(-10%, -10%);
+        padding: 15px 10px 15px 10px;
+    }
+}

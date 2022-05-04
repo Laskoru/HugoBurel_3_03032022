@@ -10,6 +10,15 @@
         transform-origin: right;
         transform: translate(50%);
     }
+    @include tablet
+    {
+        width: 0px;
+        height: 75px;
+        border-radius: 0px 15px 15px 0px;
+        transition: 500ms ease-in-out;
+        transform-origin: right;
+        transform: translate(50%);
+    }
     @include desktop
     {
         margin-left: -10px;
@@ -24,18 +33,27 @@
 {
     border-radius: 20px;
     background: white;
-    margin: 15px auto;
+    
     text-align: center;
     @include mobile-only
     {
-        width: 25px;
-        height: 25px;
+        width: 26px;
+        height: 26px;
+        margin: 15px auto;
+        margin-left: 11px;
+    }
+    @include tablet
+    {
+        width: 42px;
+        height: 42px;
+        margin: 17px;
     }
     @include desktop
     {
-        margin-top: 8px;
+        margin: 8px auto;
         width: 40px;
         height: 40px;
+        
     }
 }
 .fa-check
@@ -48,6 +66,11 @@
     {
         font-size: 1.1rem;
         margin-top: 5px;
+    }
+    @include tablet
+    {
+        font-size: 1.7rem;
+        margin-top: 8px;
     }
     @include desktop
     {

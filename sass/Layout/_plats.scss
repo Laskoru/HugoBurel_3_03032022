@@ -29,12 +29,18 @@
             @include mobile-only
             {
                 width: 60px;
+                padding-right: 10px;
                 margin-right: 20px;
+            }
+            @include tablet
+            {
+                width: 100px;
+                margin-right: 30px;
             }
             @include desktop
             {
-                height: 55px;
-                width: 310px;
+                height: 80px;
+                width: 320px;
             }
         }
         .fa-check
@@ -52,20 +58,48 @@
 }
 .plat-header
 {
-    text-overflow: ellipsis;
-    overflow:hidden;
+    
+    
     white-space:nowrap;
-    width: 300px;
     padding: 5px 0px 5px 0px;
+   
+    @include mobile-only
+    {
+        width: 250px;
+        text-overflow: ellipsis;
+        overflow:hidden;
+    }
+    @include tablet
+    {
+        width: 300px;
+    }
+    @include desktop
+    {
+        width: 310px;
+        overflow:hidden;
+    }
     
 }
 .plat-price
 {
     
-    margin-right: 10px;
+    
     transition: all 400ms ease-out;
     width: 70px;
-    text-align:right;
+    @include mobile-only
+    {
+        text-align: right;
+        
+    }
+    @include tablet
+    {
+        text-align: right;
+        margin-left: 350px;
+    }
+    @include desktop
+    {
+        text-align: center;
+    }
 }
 .description-restaurant
 {

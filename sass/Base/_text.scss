@@ -44,7 +44,7 @@ ul
     }
     @include desktop
     {
-        width: 100%;
+        width: 150px;
     }
 }
 .center
@@ -52,5 +52,6 @@ ul
     @include desktop
     {
         text-align: center;
+        margin: 20px auto;
     }
 }

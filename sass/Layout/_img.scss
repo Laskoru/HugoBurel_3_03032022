@@ -10,7 +10,13 @@
     }
     @include desktop
     {
-        width: 700px;
+        max-width: 900px;
+        height: auto;
+        object-fit: cover;
+    }
+    @include tablet
+    {
+        width: 100%;
         height: auto;
     }   
 }

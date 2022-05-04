@@ -9,21 +9,11 @@
     height: 80px;
     animation: right 2s linear;
     opacity: 0;
-    @include desktop
-    {
-        top: 195px;
-        left: 295px;
-    }
-    @include mobile-only
-    {
-        top: 75px;
-        left: 125px;
-    }
-    @include tablet
-    {
-        top: 195px;
-        left: 295px;
-    }
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 .load1
 {
@@ -37,22 +27,11 @@
     height: 70px;
     animation: left 2s linear;
     opacity: 0;
-    @include desktop
-    {
-        top: 200px;
-        left: 300px;
-    }
-    @include mobile-only
-    {
-        top: 80px;
-        left: 130px;
-
-    }
-    @include tablet
-    {
-        top: 200px;
-        left: 300px;
-    }
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 .animation
 {

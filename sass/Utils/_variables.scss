@@ -1,5 +1,7 @@
 $color-primary: #9356DC;
+$color-primary-opacity: #F5EDFF;
 $color-secondary: #FF79DA;
+$color-secondary-opacity: #ff79d98d;
 $color-tertiary: #99E2D0;
 $color-tertiary-opacity: #99e2d08f;
 $color-light: #F6F6F6;
@@ -7,7 +9,7 @@ $color-dark: #EAEAEA;
 $color-darker:#7E7E7E;
 $color-footer:#353535;
 
-$breakpoints:(mobile: 768px, desktop: 992px, tablet:768px);
-$shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
-$hover: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;;
+$breakpoints:(mobile: 767px, desktop: 1024px, tablet:768px);
+$shadow: rgba(0, 0, 0, 0.20) 0px 2px 10px;
+$hover: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 $gradient:  linear-gradient(80deg, #9356dc 0%, #ff79da 100%);
