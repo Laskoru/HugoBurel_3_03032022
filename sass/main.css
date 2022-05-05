@@ -105,27 +105,10 @@
           animation: right 2s linear;
   opacity: 0;
   margin: auto;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-@media screen and (min-width: 1024px) {
-  .load {
-    top: 900px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .load {
-    top: 900px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .load {
-    top: 2000px;
-  }
 }
 
 .load1 {
@@ -141,38 +124,15 @@
           animation: left 2s linear;
   opacity: 0;
   margin: auto;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
 
-@media screen and (min-width: 1024px) {
-  .load1 {
-    top: 900px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .load1 {
-    top: 900px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .load1 {
-    top: 2000px;
-  }
-}
-
 .animation {
   -webkit-animation: spinner-loading 2s linear;
           animation: spinner-loading 2s linear;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: auto;
 }
 
 .footer {
@@ -1064,7 +1024,7 @@ ul {
 
 @media screen and (min-width: 1024px) {
   .restaurant {
-    margin: 10px;
+    margin: 10px auto;
   }
 }
 
