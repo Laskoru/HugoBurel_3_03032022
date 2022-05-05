@@ -11,7 +11,8 @@
     cursor: pointer;
     @include desktop
     {
-        margin: 10px auto;   
+        margin: 10px;
+       
     }
     &:hover
     {
@@ -26,5 +27,6 @@
     {
         display: flex;
         flex-wrap: wrap;
+        
     }
 }
