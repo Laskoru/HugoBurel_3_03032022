@@ -1,5 +1,7 @@
 .menu-categorie
 {
+    
+    
     @include desktop
     {
         justify-content: space-between;
@@ -10,6 +12,7 @@
         
     }
 }
+
 .plat
 {
     display: flex;
@@ -22,7 +25,8 @@
     box-shadow: $shadow;
     transition: 500ms;
     overflow: hidden;
-    &:hover &:active
+    
+    &:hover, &:active
     {
         .background-green
         {

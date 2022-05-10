@@ -37,3 +37,19 @@
 {
     animation: spinner-loading 2s linear;
 }
+
+.two
+{
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s initial;
+    
+  
+}
+.three
+{
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: -2s initial;
+   
+}

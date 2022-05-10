@@ -45,6 +45,14 @@
     opacity: 1;
   }
 }
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .load {
   position: absolute;
   border-bottom: 5px solid #9356DC;
@@ -83,6 +91,18 @@
 
 .animation {
   animation: spinner-loading 2s linear;
+}
+
+.two {
+  animation-name: load;
+  animation-duration: 1s;
+  animation-delay: 1s initial;
+}
+
+.three {
+  animation-name: load;
+  animation-duration: 1s;
+  animation-delay: -2s initial;
 }
 
 .footer {
@@ -159,25 +179,25 @@
   overflow: hidden;
 }
 @media screen and (max-width: 767px) {
-  .plat:hover .plat:active .background-green {
+  .plat:hover .background-green, .plat:active .background-green {
     width: 60px;
     padding-right: 10px;
     margin-right: 20px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .plat:hover .plat:active .background-green {
+  .plat:hover .background-green, .plat:active .background-green {
     width: 100px;
     margin-right: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .plat:hover .plat:active .background-green {
+  .plat:hover .background-green, .plat:active .background-green {
     height: 80px;
     width: 320px;
   }
 }
-.plat:hover .plat:active .fa-check {
+.plat:hover .fa-check, .plat:active .fa-check {
   transform: rotate(0deg);
 }
 @media screen and (min-width: 1024px) {
@@ -328,6 +348,7 @@
 @media screen and (min-width: 1024px) {
   .logo-menu {
     width: 300px;
+    margin: 20px auto;
   }
 }
 
@@ -681,7 +702,7 @@ ul {
 @media screen and (min-width: 1024px) {
   .btn {
     padding: 0px 20px;
-    margin: auto;
+    margin: 10px auto;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {

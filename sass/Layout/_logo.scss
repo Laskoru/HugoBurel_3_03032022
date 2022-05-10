@@ -28,6 +28,7 @@
     {
         width: 160px;
         padding: 10px 10px 10px 0px;
+        
     }
     @include tablet
     {
@@ -37,5 +38,6 @@
     @include desktop
     {
         width: 300px;
+        margin: 20px auto;
     }
 }
