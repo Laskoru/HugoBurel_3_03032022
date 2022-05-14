@@ -37,19 +37,35 @@
 {
     animation: spinner-loading 2s linear;
 }
-
+.one, .two, .three, .four
+{
+    opacity: 0;
+}
+.one
+{
+    animation: load 500ms;
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+    
+}
 .two
 {
-    animation-name: load;
-    animation-duration: 1s;
-    animation-delay: 1s initial;
+    animation: load 500ms;
+    animation-delay: 600ms;
+    animation-fill-mode: forwards;
     
-  
+    
 }
 .three
 {
-    animation-name: load;
-    animation-duration: 1s;
-    animation-delay: -2s initial;
-   
+    animation: load 500ms;
+    animation-delay: 900ms;
+    animation-fill-mode: forwards;
+    
+}
+.four
+{
+    animation: load 500ms;
+    animation-delay: 1200ms;
+    animation-fill-mode: forwards;
 }

@@ -18,7 +18,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 10px;
     background: white;
     border-radius: 15px;
     padding-left: 8px;
@@ -51,14 +50,24 @@
         {
             transform: rotate(0deg);
         }
+    }
+    @include mobile-only
+    {
+        margin: 20px 10px;
+    }
+    @include tablet
+    {
+        margin: 20px 10px;
     } 
     @include desktop
     {
         text-align: center;
         flex-direction: column;
         height: 120px;
+        justify-content: space-between;
+        margin: auto;
+        
     }
-    
 }
 .plat-header
 {
@@ -129,5 +138,12 @@
     z-index: 100;
     position: relative;
     margin: -20px auto;
-   
+}
+.uppercase
+{
+    @include mobile-only
+    {
+    margin-left: 10px;
+    font-weight: lighter;
+    }
 }
