@@ -1,4 +1,4 @@
-@-webkit-keyframes check {
+@keyframes check {
   from {
     opacity: 0;
   }
@@ -131,7 +131,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 20px auto;
-    padding: auto 40px;
+    padding: 20px 40px;
     font-size: 1.5rem;
   }
 }
@@ -618,7 +618,6 @@ ul {
 
 .btn:active {
   color: #FF79DA;
-  box-shadow: #FF79DA 0, 0, 0, 0.35 0px 5px 15px;
 }
 .btn:active .btn-color {
   color: #FF79DA;

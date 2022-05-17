@@ -16,6 +16,15 @@
   }
 }
 
+@keyframes check {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes right {
   from {
     -webkit-transform: rotate(0deg);
@@ -211,7 +220,7 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 20px auto;
-    padding: auto 40px;
+    padding: 20px 40px;
     font-size: 1.5rem;
   }
 }
@@ -781,8 +790,6 @@ ul {
 
 .btn:active {
   color: #FF79DA;
-  -webkit-box-shadow: #FF79DA 0, 0, 0, 0.35 0px 5px 15px;
-          box-shadow: #FF79DA 0, 0, 0, 0.35 0px 5px 15px;
 }
 
 .btn:active .btn-color {
