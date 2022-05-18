@@ -615,6 +615,11 @@ ul {
     margin: 10px auto;
   }
 }
+@media screen and (max-width: 767px) {
+  .btn {
+    padding: 5px 0px;
+  }
+}
 
 .btn:active {
   color: #FF79DA;
