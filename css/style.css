@@ -6,14 +6,6 @@
     opacity: 1;
   }
 }
-@keyframes check {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes right {
   from {
     transform: rotate(0deg);
