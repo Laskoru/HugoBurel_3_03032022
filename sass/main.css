@@ -737,6 +737,10 @@ ul {
   }
 }
 
+.shrikhand {
+  font-family: "shrikhand";
+}
+
 .btn {
   border: none;
   margin: 20px;
