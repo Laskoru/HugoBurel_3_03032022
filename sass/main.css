@@ -703,7 +703,10 @@ nav {
 }
 
 .checked {
-  color: #FF79DA;
+  background: linear-gradient(80deg, #9356dc 0%, #ff79da 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .uppercase {
@@ -1164,6 +1167,7 @@ nav {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .plat-header {
     width: 300px;
+    overflow: hidden;
   }
 }
 
@@ -1189,7 +1193,7 @@ nav {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .plat-price {
     text-align: right;
-    margin-left: 350px;
+    margin-right: -300px;
   }
 }
 
